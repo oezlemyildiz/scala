@@ -33,8 +33,6 @@ case class Friends(id:Int, name:String, age:Int, friends:Long )
     ds_friendsByAge.groupBy("age").avg("friends").sort("age").show()
     ds_friendsByAge.groupBy("age").agg(round(avg("friends"),2)).alias("friends_avg").sort("age").show()
 
-
-
   }
 
 }
