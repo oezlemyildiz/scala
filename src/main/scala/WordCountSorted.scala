@@ -11,7 +11,9 @@ object WordCountSorted {
     val wordCount= lowerCaseWords.map(x=> (x, 1)).reduceByKey((x,y)=>x+y)
     wordCount.take(10).foreach(println)
     val wordCountSorted = wordCount.map(x=> (x._2, x._1)).sortByKey()
+    val wordCountSorted2=wordCount.collect()
     wordCountSorted.take(5).foreach(println)
+    wordCountSorted2.take(5).foreach(println)
     for(result <- wordCountSorted){
       val count = result._1
       val word = result._2

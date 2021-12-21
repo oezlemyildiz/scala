@@ -15,7 +15,8 @@ object FriendsByAge {
     val rdd= data.map(parseLine)
     val totalsByAge=rdd.mapValues(x=>(x,1)).reduceByKey((x,y)=>(x._1 + y._1, x._2+ y._2))
     /** anlamak için böldüm
-     ------x._1 +y._1 kaç tane arkadaş var,y._1,  x._2+ y._2  ne kadar insan var
+     ------x._1 +y._1 kaç tane arkadaş var,
+    -------y._1,  x._2+ y._2  ne kadar insan var
     val totalsByAge2 = rdd.mapValues(x=>(x,1))
     println("totalbyAge yazdırılıyor")
     totalsByAge2.foreach(println)
