@@ -42,14 +42,5 @@ object WordCountDataSet {
     val wordCountDS= lowerWordsDS.groupBy("word").count()
     val wordCountSortedDS=wordCountDS.sort("count")
     wordCountSortedDS.show(wordCountSortedDS.count.toInt)
-
-
-
-
-
-
-
-
   }
-
 }
