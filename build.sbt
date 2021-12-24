@@ -1,4 +1,4 @@
-name := "sbt_1_3_13_scala_2_12_12"
+name := "ScalaProject"
 
 version := "0.1"
 
