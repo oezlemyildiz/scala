@@ -10,7 +10,9 @@ object read {
       .getOrCreate()
 
     import spark.implicits._
-  val parquet = spark.read.parquet("/Users/ozlemyildiz/Downloads/userdata1.parquet");
+  //val parquet = spark.read.parquet("/Users/ozlemyildiz/Downloads/userdata1.parquet");
+    val parquet = spark.read.parquet("/Users/ozlemyildiz/Downloads/subscribDataRecords.snappy (1).parquet");
+
   parquet.show(20)
 
   }
